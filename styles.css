@@ -1,15 +1,12 @@
 body {
     background-image: url(https://i.pinimg.com/564x/9f/91/26/9f9126411ece8b213febe34e05bf0c8c.jpg);
-    font-family: Arial, Helvetica, sans-serif;
 }
-h1, h2{
+
+
+.box, h2{
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
     text-align: center;
-}
-p {
-    text-align: justify;
-	text-align-last: none;
-    color: white;
-    font-weight: bold;
     
 }
 
@@ -58,3 +55,8 @@ p:hover {
     text-align: center;
     color: bisque;
   }
+
+.spotify {
+    margin: auto;
+    display: block;
+}

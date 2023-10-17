@@ -1,0 +1,62 @@
+body {
+    background-image: url(https://i.pinimg.com/564x/9f/91/26/9f9126411ece8b213febe34e05bf0c8c.jpg);
+}
+
+
+.box, h2{
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    text-align: center;
+    
+}
+
+.header {
+    max-width: 200px;
+}
+
+p:hover {
+    text-align: justify;
+	text-align-last: none;
+    color:bisque
+}
+
+.logo {
+    max-width: 150px;
+    margin: auto;
+    display: block;
+}
+
+.pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: auto;
+    max-width: 85%;
+
+}
+
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+    padding: 5px;
+  }
+
+  figcaption {
+    margin-top: -25px;
+    text-align: center;
+  }
+  figcaption:hover {
+    margin-top: -25px;
+    text-align: center;
+    color: bisque;
+  }
+
+.spotify {
+    margin: auto;
+    display: block;
+}

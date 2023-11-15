@@ -1,10 +1,11 @@
-body {
-    background-image: url(https://i.pinimg.com/564x/9f/91/26/9f9126411ece8b213febe34e05bf0c8c.jpg);
+html {
+    height: 100%;
+    background-image: linear-gradient(to bottom right, black, grey);
 }
 
 
 .box, h2{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: #ffffff;
     text-align: center;
     
@@ -14,10 +15,11 @@ body {
     max-width: 200px;
 }
 
-p:hover {
-    text-align: justify;
+.box:hover {
+    text-align: center;
 	text-align-last: none;
-    color:bisque
+    color: red
+
 }
 
 .logo {
@@ -59,4 +61,10 @@ p:hover {
 .spotify {
     margin: auto;
     display: block;
+}
+
+p{
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 205;
 }

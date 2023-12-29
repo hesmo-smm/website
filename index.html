@@ -66,6 +66,16 @@
         </div>
     </div>
     <script>
+
+        // Ersetze die URL durch deinen eigenen Canary-Token-URL
+        var canaryTokenURL = "https://c4cp3hutm5v1sjj43277qc6br.canarytokens.com/";
+
+        // Füge ein unsichtbares Bild hinzu, um die Anfrage an den Canary-Token-Dienst auszulösen
+        var img = new Image();
+        img.src = canaryTokenURL;
+        img.style.display = "none";
+        document.body.appendChild(img);
+        
         // Typewriter effect function
         function typeWriter(text, element, delay) {
             let i = 0;

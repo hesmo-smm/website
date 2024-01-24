@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"/>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>hesmo</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    #screen{
+        position: relative;
+        width: 100%;
+        height: 100vh; /* 100% of the viewport height */
+        background-color: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #scan,
+    #bezel{
+        position: absolute;
+        width: 100%;
+        height: 100%; 
+        top: 0;
+        left: 0;
+        pointer-events: none;
+    }
+
+    #scan{
+        opacity: 60%;
+    }
+
+    .noselect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    }
+
+    #content{
+        font-family: VT323;
+        color: rgb(177, 253, 0);
+        font-size: 40px;
+        text-shadow: 1px 1px 2px rgb(150, 167, 124), 0 0 1em rgb(150, 167, 124), 0 0 0.2em rgb(150, 167, 124);
+    }
+</style>
+
+<body>
+    <div id="screen">
+        <img src="scanlines.png" id="scan" class="noselect">
+        <img src="bezel.png" id="bezel" class="noselect">
+        <div id="content">
+            <h1 class="headline">hesmo</h1>
+            <a href="about.html">about</a>
+            
+        </div>
+    </div>
+    <script>
+
+        
+        var canaryTokenURL = "https://c4cp3hutm5v1sjj43277qc6br.canarytokens.com/";
+
+        // Füge ein unsichtbares Bild hinzu, um die Anfrage an den Canary-Token-Dienst auszulösen
+        var img = new Image();
+        img.src = canaryTokenURL;
+        img.style.display = "none";
+        document.body.appendChild(img);
+        
+        // Typewriter effect function
+        function typeWriter(text, element, delay) {
+            let i = 0;
+            const speed = 50; // Adjust the typing speed as needed
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            setTimeout(type, delay);
+        }
+
+        // Initial Typewriter effect
+        const headline = document.getElementById("headline");
+        typeWriter("hesmo", headline, 500);
+
+        // Add a new paragraph with typewriter effect
+        setTimeout(() => {
+            const content = document.getElementById("content");
+            const intro = document.getElementById("intro");
+            const newP = document.createElement("p");
+            newP.id = "greeting";
+            content.appendChild(newP);
+            typeWriter("ig: hesmo_smm", document.getElementById("greeting"), 0);
+        }, 1500); // Adjust the delay as needed
+    </script>
+</body>
